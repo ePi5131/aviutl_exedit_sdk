@@ -1,0 +1,26 @@
+#pragma once
+
+#include <aviutl/AviFileHandle.hpp>
+#include <aviutl/aviutl_window_info_t.hpp>
+#include <aviutl/Color.hpp>
+#include <aviutl/ColorPlugin.hpp>
+#include <aviutl/ColorProcInfo.hpp>
+#include <aviutl/EditHandle.hpp>
+#include <aviutl/Exfunc.hpp>
+#include <aviutl/FileInfo.hpp>
+#include <aviutl/filter.hpp>
+#include <aviutl/FilterPlugin.hpp>
+#include <aviutl/FilterProcInfo.hpp>
+#include <aviutl/flag.hpp>
+#include <aviutl/FrameStatus.hpp>
+#include <aviutl/input.hpp>
+#include <aviutl/InputHandle.hpp>
+#include <aviutl/InputInfo.hpp>
+#include <aviutl/InputPlugin.hpp>
+#include <aviutl/LangResources.hpp>
+#include <aviutl/MultiThreadFunc.hpp>
+#include <aviutl/output.hpp>
+#include <aviutl/OutputInfo.hpp>
+#include <aviutl/OutputPlugin.hpp>
+#include <aviutl/pixel.hpp>
+#include <aviutl/SysInfo.hpp>

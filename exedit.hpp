@@ -1,0 +1,22 @@
+#pragma once
+
+#include <exedit/BackupFileHandler.hpp>
+#include <exedit/cache.hpp>
+#include <exedit/CameraZbuffer.hpp>
+#include <exedit/CommandId.hpp>
+#include <exedit/exdata.hpp>
+#include <exedit/Exfunc.hpp>
+#include <exedit/FilterProcInfo.hpp>
+#include <exedit/exo.hpp>
+#include <exedit/output_rgba.hpp>
+#include <exedit/Filter.hpp>
+#include <exedit/layer.hpp>
+#include <exedit/Object.hpp>
+#include <exedit/ObjectFilterIndex.hpp>
+#include <exedit/pixel.hpp>
+#include <exedit/save.hpp>
+#include <exedit/scene.hpp>
+#include <exedit/structs.hpp>
+#include <exedit/SubFilterProcInfo.hpp>
+#include <exedit/susie.hpp>
+#include <exedit/undo.hpp>
