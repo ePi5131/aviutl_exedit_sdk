@@ -51,7 +51,7 @@ namespace ExEdit {
         void* exdata_ptr;
         int32_t exdata_size;
         char* information;
-        BOOL(*func_window_init)(HINSTANCE hinstance, HWND hwnd, int32_t y, int32_t base_id, int32_t sw_param, Filter* efp);
+        int(*func_window_init)(HINSTANCE hinstance, HWND hwnd, int32_t y, int32_t base_id, int32_t sw_param, Filter* efp);
         BOOL(*func_window_hide)(); // save_end
         AviUtl::ExFunc* aviutl_exfunc;
         Exfunc* exfunc;
