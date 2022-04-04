@@ -55,7 +55,11 @@ namespace ExEdit {
 
         struct efAudioFile : ExdataBase {
             char file[260];
-            int32_t unknown[5];
+            int32_t i1;
+            int32_t i2;
+            int32_t frame_n;
+            int32_t i4;
+            int32_t i5;
         };
 
         struct efText : ExdataBase {
@@ -82,7 +86,11 @@ namespace ExEdit {
 
         struct efWaveForm : ExdataBase {
             char file[260];
-            int32_t unknown[5];
+            int32_t i1;
+            int32_t i2;
+            int32_t frame_n;
+            int32_t i4;
+            int32_t i5;
             int16_t type;
             int16_t mode;
             int16_t res_W;
