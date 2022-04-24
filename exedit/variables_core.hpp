@@ -18,12 +18,12 @@ namespace ExEdit {
 		};
 
 		template <typename Variable>
-		constexpr Variable::reference_type get092(const unsigned int exedit_base) {
+		inline Variable::reference_type get092(const unsigned int exedit_base) {
 			return reinterpret_cast<Variable::reference_type>(exedit_base + Variable::offset092);
 		}
 
 		template <typename Variable>
-		constexpr Variable::reference_type get093rc1(const unsigned int exedit_base) {
+		inline Variable::reference_type get093rc1(const unsigned int exedit_base) {
 			return reinterpret_cast<Variable::reference_type>(exedit_base + Variable::offset093rc1);
 		}
 

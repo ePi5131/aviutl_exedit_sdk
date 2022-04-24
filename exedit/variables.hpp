@@ -91,10 +91,6 @@ namespace ExEdit {
 			_OFFSET(092) = 0x1E0FA4;
 			_OFFSET(093rc1) = 0x12BA58;
 
-			struct length : Variable<int> {
-				_OFFSET(092) = 0x146250;
-			};
-
 			struct size : Variable<int> {
 				_OFFSET(092) = 0x1E0FA0;
 				_OFFSET(093rc1) = 0x129A4C;
@@ -105,7 +101,9 @@ namespace ExEdit {
 			_OFFSET(092) = 0x168FA8;
 			_OFFSET(093rc1) = 0x1B2560;
 
-			using length = objectTable::length;
+			struct length : Variable<int> {
+				_OFFSET(092) = 0x146250;
+			};
 
 			struct layerIndexBegin : Variable<int> {
 				_OFFSET(092) = 0x149670;
