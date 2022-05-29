@@ -20,3 +20,5 @@
 #include <exedit/SubFilterProcInfo.hpp>
 #include <exedit/susie.hpp>
 #include <exedit/undo.hpp>
+#include <exedit/variables_core.hpp>
+#include <exedit/variables.hpp>
