@@ -28,8 +28,9 @@ namespace ExEdit {
         OutputData data;
 
         OutputHelper() {
+            const auto exedit_map_ver = 0x3031; // '01'
             char name[256];
-            wsprintfA(name, "exedit_%d_%d", '01', GetCurrentProcessId());
+            wsprintfA(name, "exedit_%d_%d", exedit_map_ver, GetCurrentProcessId());
             auto hfmo = OpenFileMappingA(FILE_MAP_WRITE, FALSE, name);
             if (!hfmo) throw std::runtime_error("拡張編集プラグインのバージョンが違うか認識されていません");
 
