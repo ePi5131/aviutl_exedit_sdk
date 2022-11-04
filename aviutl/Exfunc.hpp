@@ -79,7 +79,7 @@ namespace AviUtl{
 
         BOOL (*rgb2yc)(PixelYC* ycp, PixelBGR* pixelp, int32_t w);
 
-        BOOL (*yc2rgb)(PixelYC* pixelp, PixelBGR* ycp, int32_t w);
+        BOOL (*yc2rgb)(PixelBGR* pixelp, PixelYC* ycp, int32_t w);
 
         BOOL (*dlg_get_load_name)(LPSTR name, LPCSTR filter, LPCSTR def);
 
