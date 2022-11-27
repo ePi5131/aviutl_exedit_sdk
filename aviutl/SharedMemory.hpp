@@ -2,8 +2,8 @@
 
 
 namespace AviUtl {
-    struct SharedMemoryHandle;
-    struct SharedMemoryHandle {
+    struct SharedMemoryInfo;
+    struct SharedMemoryInfo {
         HANDLE hFileMappingObject
         void* mem_ptr;
         SIZE_T size;
