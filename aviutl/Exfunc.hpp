@@ -201,11 +201,11 @@ namespace AviUtl{
 
         BOOL (*set_config)(EditHandle* editp, int32_t n, LPSTR name);
         
-        BOOL (*smem1)(uint32_t, uint32_t, SIZE_T size, uint32_t);
+        void* (*create_shared_mem)(int key1, int key2, SIZE_T size, HANDLE* handle);
 
-        BOOL (*smem2)(uint32_t, uint32_t, SIZE_T size, uint32_t);
+        void* (*find_shared_mem)( int key1, int key2, HANDLE handle);
 
-        BOOL (*smem3)(uint32_t, uint32_t, SIZE_T size, uint32_t);
+        void (*delete_shared_mem)( int key1, HANDLE handle);
 
         int32_t reserve[4];
     };
