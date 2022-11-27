@@ -202,7 +202,7 @@ namespace AviUtl{
 
         BOOL (*set_config)(EditHandle* editp, int32_t n, LPSTR name);
         
-        void* (*create_shared_mem)(int32_t key1, int32_t key2, int32_t size, SharedMemoryInfo** handle);
+        void* (*create_shared_mem)(int32_t key1, int32_t key2, int32_t size, SharedMemoryInfo** handle_ptr);
 
         void* (*get_shared_mem)(int32_t key1, int32_t key2, SharedMemoryInfo* handle);
 
