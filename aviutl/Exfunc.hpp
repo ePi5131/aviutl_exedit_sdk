@@ -9,6 +9,7 @@
 #include <aviutl/FrameStatus.hpp>
 #include <aviutl/FileInfo.hpp>
 #include <aviutl/SysInfo.hpp>
+#include <aviutl/SharedMemory.hpp>
 
 namespace AviUtl{
 
@@ -201,11 +202,11 @@ namespace AviUtl{
 
         BOOL (*set_config)(EditHandle* editp, int32_t n, LPSTR name);
         
-        void* (*create_shared_mem)(int32_t key1, int32_t key2, int32_t size, HANDLE* handle);
+        void* (*create_shared_mem)(int32_t key1, int32_t key2, int32_t size, SharedMemoryInfo** handle);
 
-        void* (*get_shared_mem)(int32_t key1, int32_t key2, HANDLE handle);
+        void* (*get_shared_mem)(int32_t key1, int32_t key2, SharedMemoryInfo* handle);
 
-        void (*delete_shared_mem)(int32_t key1, HANDLE handle);
+        void (*delete_shared_mem)(int32_t key1, SharedMemoryInfo* handle);
 
         int32_t reserve[4];
     };
