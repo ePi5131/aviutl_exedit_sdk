@@ -8,6 +8,6 @@ namespace ExEdit {
         int32_t data_id;
         int32_t object_od;
         int32_t data_size;
-        void* data;
+        std::byte data[1];
     };
 }
