@@ -41,7 +41,7 @@ namespace ExEdit {
         void (*x74)(void* struct_ptr);
         int32_t (*get_frame_a)();
         int32_t (*set_frame_a)(int32_t n);
-        void (*x80)(ObjectFilterIndex idx);
+        void (*set_undo)(ObjectFilterIndex idx, int32_t _unused_flag);
         BOOL (*x84)(ObjectFilterIndex idx);
     };
 }

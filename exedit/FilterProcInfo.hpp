@@ -60,7 +60,7 @@ namespace ExEdit {
         int32_t unknown3[3];
         int32_t subframe;
         int32_t object_start_frame;
-        int32_t unknown_camera_idx;
+        int32_t v_func_idx;
         int32_t obj_index;
         int32_t obj_num;
         int32_t unknown4[4];
