@@ -46,8 +46,8 @@ namespace AviUtl{
         int32_t reserve[16];
         int32_t unknown;
         char path[260];
-        char name2[256];
-        char filefilter2[256];
-        char information2[256];
+        char name2[260];
+        char filefilter2[260];
+        char information2[260];
     };
 }
