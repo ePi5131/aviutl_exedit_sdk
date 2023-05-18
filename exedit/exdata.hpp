@@ -3,7 +3,7 @@
 
 namespace ExEdit {
     struct ExdataUse {
-        enum class Type {
+        enum class Type : int16_t {
             Padding = 0,
             Number = 1,
             String = 2,
