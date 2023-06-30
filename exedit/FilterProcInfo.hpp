@@ -67,7 +67,7 @@ namespace ExEdit {
         int32_t obj_index;
         int32_t obj_num;
         int32_t* layer_clipping_flag; // 1:上のオブジェクト, 2:クリッピングするオブジェクト
-        int32_t* layer_subframe;
+        int32_t* layer_subframe; // 時間制御を考慮したsubframe
         Object** layer_effect_objectp;
         Object** layer_group_objectp;
         Object* obj_layerp;
