@@ -5,6 +5,7 @@
 #include <aviutl/flag.hpp>
 #include <exedit/pixel.hpp>
 #include <exedit/Object.hpp>
+#include <exedit/ObjectFilterIndex.hpp>
 
 namespace ExEdit {
     struct FilterProcInfo {
@@ -35,7 +36,7 @@ namespace ExEdit {
         int32_t yc_size;
         int32_t line_size;
         int32_t unknown[24];
-        int32_t frame_num;
+        int32_t frame_num; // タイムライン上の現在フレーム
         PixelYCA* obj_edit;
         PixelYCA* obj_temp;
         int32_t obj_w;
@@ -57,20 +58,31 @@ namespace ExEdit {
         int32_t framerate_nu;
         int32_t framerate_de;
         int16_t* audio_data;
-        int32_t unknown3[3];
-        int32_t subframe;
+        int16_t* audio_temp;
+        int32_t audio_rate;
+        int32_t add_frame; // frame_numに対して計算上の加算
+        int32_t subframe; // 計算上の加算subframe
         int32_t object_start_frame;
         int32_t v_func_idx;
         int32_t obj_index;
         int32_t obj_num;
-        int32_t unknown4[4];
+        int32_t* layer_clipping_flag; // 1:上のオブジェクト, 2:クリッピングするオブジェクト
+        int32_t* layer_subframe;
+        Object** layer_effect_objectp;
+        Object** layer_group_objectp;
         Object* obj_layerp;
         Object* objectp;
         int32_t unknown5;
         struct PolyData {
             int32_t x, y, z, u, v;
         }polydata[4];
-        int32_t unknown6[3];
+        int32_t tick_count;
+        ObjectFilterIndex scene_ofi;
+        int32_t audio_milliframe;
+        int32_t audio_use_milliframe_flag;
+        int32_t sub_size_x; // (root_w - fpip->w) / 2
+        int32_t sub_size_y; // (root_h - fpip->h) / 2
+        int32_t clipping_data_exists;
     };
 }
 template<> struct AviUtl::detail::flag::ops_def<ExEdit::FilterProcInfo::Flag> : std::true_type {};
