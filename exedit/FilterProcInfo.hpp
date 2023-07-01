@@ -79,7 +79,7 @@ namespace ExEdit {
         int32_t tick_count;
         ObjectFilterIndex scene_ofi;
         int32_t audio_milliframe;
-        int32_t audio_use_milliframe_flag;
+        int32_t audio_speed; // 等速=1000000
         int32_t sub_size_x; // (root_w - fpip->w) / 2
         int32_t sub_size_y; // (root_h - fpip->h) / 2
         int32_t clipping_data_exists;
