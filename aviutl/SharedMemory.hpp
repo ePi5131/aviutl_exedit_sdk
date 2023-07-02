@@ -1,5 +1,5 @@
 #pragma once
-
+#include <Windows.h>
 
 namespace AviUtl {
     struct SharedMemoryInfo {
