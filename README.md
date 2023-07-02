@@ -1,15 +1,23 @@
-# aviutl_exedit_sdk v1.1
+# aviutl_exedit_sdk v1.2
 ## これは何？
 AviUtlと拡張編集の中身をガチャガチャするときに使うライブラリ
 
 ## 使用方法
-最初は適当にインクルードして、後は流れでお願いします
+`aviutl.hpp`と`exedit.hpp`があるディレクトリをインクルードパスに追加
+AviUtlっぽいことをしたければとりあえず`aviutl.hpp`を、拡張編集っぽいことをしたければ`exedit.hpp`を読めば全部持ってくる
+欲しい型を個別に`aviutl/*.hpp`などから取ってきてもよい
 
 ## ライセンス
 1条項BSD
 詳細は LICENSE を見ること
 
 ## 更新履歴
+
+### v1.2
+- 変更: `ExEdit::FilterProcInfo`の詳細を反映
+- 変更: `ExEdit::Filter::Flag::bit11`を削除
+- 修正: `PixelBGRA`→`PixelYCA`の変換係数がおかしかった
+- 修正: `ExEdit::ExdataUse::Type`の基底を指定してなかったのでレイアウトが壊れてた
 
 ### v1.1
 - 変更: `AviUtl::Exfunc`の1.10での共有メモリ関連の追加関数の詳細を反映
