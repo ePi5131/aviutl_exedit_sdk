@@ -12,12 +12,12 @@ namespace ExEdit{
     struct PixelBGRA {
         uint8_t b,g,r,a;
         PixelBGRA& operator=(const PixelBGR& bgr) { this->b=bgr.b;this->g=bgr.g;this->r=bgr.r;this->a=255;return *this; }
-        constexpr inline operator PixelYCA() const;
+        constexpr operator PixelYCA() const;
     };
     struct PixelYCA {
         int16_t y,cb,cr,a;
         PixelYCA& operator=(const PixelYC& yc) { this->y=yc.y;this->cb=yc.cb;this->cr=yc.cr;this->a=4096;return *this; }
-        constexpr inline operator PixelBGRA() const {
+        constexpr operator PixelBGRA() const {
             return {
                  static_cast<uint8_t>((3+((y*16320)>>16)+((cb*28919)>>16)                  )>>2),
                  static_cast<uint8_t>((3+((y*16320)>>16)+((cb*-5616)>>16)+((cr*-11655)>>16))>>2),
@@ -27,7 +27,7 @@ namespace ExEdit{
         }
     };
 
-    constexpr inline PixelBGRA::operator PixelYCA() const {
+    inline constexpr PixelBGRA::operator PixelYCA() const {
         auto r_ = (r << 6) + 18;
         auto g_ = (g << 6) + 18;
         auto b_ = (b << 6) + 18;
