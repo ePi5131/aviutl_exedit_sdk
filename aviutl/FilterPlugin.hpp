@@ -146,7 +146,7 @@ namespace AviUtl{
 
         BOOL(*func_project_save)(FilterPlugin* fp, EditHandle* editp, void* data, int32_t* size);
 
-        BOOL(*func_modify_title)(FilterPlugin* fp, EditHandle* editp, LPSTR title, int32_t max_title);
+        BOOL(*func_modify_title)(FilterPlugin* fp, EditHandle* editp, int32_t frame, LPSTR title, int32_t max_title);
         
         char* path;
 
@@ -188,7 +188,7 @@ namespace AviUtl{
         BOOL(*func_is_saveframe)(FilterPlugin* fp, EditHandle* editp, int32_t saveno, int32_t frame, int32_t fps, int32_t edit_flag, int32_t inter);
         BOOL(*func_project_load)(FilterPlugin* fp, EditHandle* editp, void* data, int32_t size);
         BOOL(*func_project_save)(FilterPlugin* fp, EditHandle* editp, void* data, int32_t* size);
-        BOOL(*func_modify_title)(FilterPlugin* fp, EditHandle* editp, LPSTR title, int32_t max_title);
+        BOOL(*func_modify_title)(FilterPlugin* fp, EditHandle* editp, int32_t frame, LPSTR title, int32_t max_title);
         struct{
             char path[260];
             HMENU menu1;

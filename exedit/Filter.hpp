@@ -100,6 +100,5 @@ namespace ExEdit {
         int32_t layer_set;
         int32_t scene_set;
     };
-    constexpr auto a = sizeof(Filter);
 }
 template<> struct AviUtl::detail::flag::ops_def<ExEdit::Filter::Flag> : std::true_type {};
