@@ -15,7 +15,7 @@ namespace ExEdit {
             effect_object       = 1 <<  7, // グループ制御やフィルタ効果のみのオブジェクトなど
             frame_alpha         = 1 <<  8, // frame_edit,frame_tempにアルファチャンネルあり
             fast_preview        = 1 <<  9, // 画像処理を間引いて表示
-            preprocessing       = 1 << 10, // フィルタの前処理（Filter.Flagのpreprocessing参照）
+            preprocessing       = 1 << 10, // フィルタの前処理（Filter.Flagのpreprocess参照）
             hide_output_gui     = 1 << 11, // オブジェクト枠の点線などを表示しない
             nesting             = 1 << 12, // シーンオブジェクトなどからフレーム画像取得を行っている
             invert_field_order  = 1 << 16, // AviUtl::FilterProcInfo側のフラグ
