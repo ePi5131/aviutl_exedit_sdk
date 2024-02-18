@@ -10,12 +10,16 @@
 namespace ExEdit {
     struct FilterProcInfo {
         enum Flag : uint32_t {
-            bit3         = 1 <<  3,
-            bit6         = 1 <<  6, // efMovieFileなど
-            fast_preview = 1 <<  9,
-            early_filter = 1 << 10, // obj.effect()(引数なし) などを実行するときに設定される
-            effect_noarg = 1 << 11, // obj_effect_noarg するときに設定される
-            bit12        = 1 << 12, // video_func_main
+            setting_dialog      = 1 <<  4, // そのオブジェクトの設定ダイアログが表示されている
+            alpha_omittable     = 1 <<  6, // Filter.FlagがInputのフィルタでこのフラグがある場合にはno_alpha=1とすることでobj_editのアルファチャンネルを省くことができる
+            effect_object       = 1 <<  7, // グループ制御やフィルタ効果のみのオブジェクトなど
+            frame_alpha         = 1 <<  8, // frame_edit,frame_tempにアルファチャンネルあり
+            fast_preview        = 1 <<  9, // 画像処理を間引いて表示
+            preprocessing       = 1 << 10, // フィルタの前処理（Filter.Flagのpreprocess参照）
+            hide_output_gui     = 1 << 11, // オブジェクト枠の点線などを表示しない
+            nesting             = 1 << 12, // シーンオブジェクトなどからフレーム画像取得を行っている
+            invert_field_order  = 1 << 16, // AviUtl::FilterProcInfo側のフラグ
+            invert_interlace    = 1 << 17, // AviUtl::FilterProcInfo側のフラグ
 
         } flag;
         void* frame_edit;
@@ -51,7 +55,7 @@ namespace ExEdit {
         } obj_data;
         int32_t obj_line; // obj_max_w
         int32_t obj_max_h;
-        int32_t xf4; // 直前オブジェクトが有効かどうか？
+        int32_t no_alpha; // obj_editにアルファ情報がないフラグ PixelYC*と同じように扱うようになる
         enum class ObjectFlag {
             bit16 = 1 << 16
         } object_flag;

@@ -18,7 +18,7 @@ namespace ExEdit {
             Effect       = 1 << 5,
             Unputable    = 1 << 7, // タイムライン配置メニューには出てこない
             Unaddable    = 1 << 8, // タイムライン配置メニューにのみ出現、エフェクト追加メニューには出てこない
-            Unknown1     = 1 << 9, // これを外すとマスク、ディスプレイスメントマップでシーンが使えなくなる。拡張色設定で色が変化しなくなる。
+            preprocess   = 1 << 9, // 前処理部分でfunc_procが実行される（その後は通常のfunc_procも行われる） 前処理の時はFilterProcInfo.Flagのpreprocessフラグが立っている
             HasExdata    = 1 << 10,
             BasicEffect  = 1 << 15,
             Audio        = 1 << 21,
